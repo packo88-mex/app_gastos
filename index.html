@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="./Resources/css/style.css" />
+    <title>Aplicación de Gastos</title>
+  </head>
+  <body>
+    <h1>Mi Aplicación para Gastos</h1>
+    <div class="row">
+      <!--Div para la tabla-->
+      <div class="col s5">
+        <div class="col s12 offset-s1 l5">
+          <div class="formatoTabla">
+            <table id="transactionTable">
+              <tr>
+                <th>Tipo</th>
+                <th>Descripción</th>
+                <th>Monto</th>
+                <th>Categoría</th>
+                <th>Eliminar</th>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!--Div para el formulario-->
+      <div class="col s6">
+        <div class="col s12 offset-s2 l7">
+          <form id="transactionForm">
+            <div class="classTransaccion">
+              <label>Tipo de transacción: </label>
+              <p>
+                <label>
+                  <input
+                    required
+                    class="with-gap"
+                    name="transactionTypeSelector"
+                    type="radio"
+                    value="Ingreso"
+                    checked
+                  />
+                  <span>Ingreso</span>
+                </label>
+                <label>
+                  <input
+                    class="with-gap"
+                    name="transactionTypeSelector"
+                    type="radio"
+                    value="Egreso"
+                  />
+                  <span>Egreso</span>
+                </label>
+              </p>
+            </div>
+
+            <div class="input-field">
+              <label for="transactionDescr">Descripción</label>
+              <input
+                required
+                id="transactionDescr"
+                type="text"
+                class="validate"
+                name="transactionDescr"
+              />
+            </div>
+            <div class="input-field">
+              <label for="transactionMonto">Monto</label>
+              <!--<input required min="1"-->
+              <input
+                id="transactionMonto"
+                type="number"
+                class="validate"
+                name="transactionMonto"
+                type="number"
+              />
+            </div>
+            <div class="classTransaccion">
+              <label for="transactionCategoria">Categoría</label>
+              <!-- <input required id="transactionCategoria" name="transactionCategoria" /> -->
+              <select
+                class="browser-default"
+                required
+                id="transactionCategoria"
+                name="transactionCategoria"
+              >
+                <option value="" disabled selected>Escoge una opción</option>
+              </select>
+            </div>
+            <br /><br />
+            <div class="classTransaccion">
+              <button
+                type="submit"
+                class="btn waves-effect waves-light"
+                id="anadirBoton"
+                name="action"
+              >
+                Añadir <i class="material-icons right">send</i>
+              </button>
+              <button
+                type="reset"
+                class="btn waves-effect waves-light"
+                id="limpiarBoton"
+                name="action"
+              >
+                Limpiar <i class="material-icons right">delete</i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Compiled and minified JavaScript -->
+    <script src="Resources/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </body>
+</html>

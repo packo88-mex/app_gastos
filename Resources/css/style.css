@@ -1,0 +1,28 @@
+th,
+td {
+  border: solid burlywood 1px;
+  padding: 20px;
+}
+
+.formatoTabla table {
+  margin: 10px auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  text-align: center;
+}
+/*.classTransaccion {
+  background-color: bisque;
+  padding-bottom: 15px;
+}*/
+.classAnadir {
+  font-size: 20px;
+}
+/* Otra forma de mandar a llamar el objeto es mediante al atributo Id y se llama mediante el # */
+#limpiarBoton {
+  font-size: 20px;
+}
